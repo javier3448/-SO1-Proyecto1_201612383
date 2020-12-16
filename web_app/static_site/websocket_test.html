@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+  <head>
+	<title>[SO1]Proyecto1_201612383</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+<body>
+    <script>
+        let socket = new WebSocket("ws://localhost:3000/ws")
+        console.log("Attempting Websocket Connection")
+
+        //Listen in for any socket events
+        socket.onopen = () => {
+            console.log("Successfully Connected");
+            socket.send("Hello from client");
+        }
+
+        socket.onclose = (event) => {
+            console.log("Socket Closed Connection: ", event);
+        }
+
+        var my_counter = 0;
+        socket.onmessage = (msg) => {
+            my_counter++;
+            console.log("Data de Mensaje numero: " + my_counter);
+            //The replace is a horrible horrible bodge that is slow
+            console.log(JSON.parse(msg.data.replace(",\n]", "\n]")));
+
+            socket.send("hello");
+        }
+
+        socket.onerror = (error) => {
+            console.log("Socket error: ", error);
+        }
+    </script>
+</body>
+</html>

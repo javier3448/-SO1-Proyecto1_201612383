@@ -1,0 +1,1939 @@
+{
+"cputime_usage":589839869909,
+"cputime_total":22393157835709,
+"processes":[
+{
+"PID" : 1, 
+"PPID" : 0, 
+"name" : "systemd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 10
+},
+{
+"PID" : 2, 
+"PPID" : 0, 
+"name" : "kthreadd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 3, 
+"PPID" : 2, 
+"name" : "rcu_gp", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 4, 
+"PPID" : 2, 
+"name" : "rcu_par_gp", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 6, 
+"PPID" : 2, 
+"name" : "kworker/0:0H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 8, 
+"PPID" : 2, 
+"name" : "mm_percpu_wq", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 9, 
+"PPID" : 2, 
+"name" : "ksoftirqd/0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 10, 
+"PPID" : 2, 
+"name" : "rcuc/0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 11, 
+"PPID" : 2, 
+"name" : "rcu_preempt", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 12, 
+"PPID" : 2, 
+"name" : "rcub/0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 13, 
+"PPID" : 2, 
+"name" : "migration/0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 14, 
+"PPID" : 2, 
+"name" : "idle_inject/0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 15, 
+"PPID" : 2, 
+"name" : "kworker/0:1", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 16, 
+"PPID" : 2, 
+"name" : "cpuhp/0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 17, 
+"PPID" : 2, 
+"name" : "cpuhp/1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 18, 
+"PPID" : 2, 
+"name" : "idle_inject/1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 19, 
+"PPID" : 2, 
+"name" : "migration/1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 20, 
+"PPID" : 2, 
+"name" : "rcuc/1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 21, 
+"PPID" : 2, 
+"name" : "ksoftirqd/1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 23, 
+"PPID" : 2, 
+"name" : "kworker/1:0H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 24, 
+"PPID" : 2, 
+"name" : "cpuhp/2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 25, 
+"PPID" : 2, 
+"name" : "idle_inject/2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 26, 
+"PPID" : 2, 
+"name" : "migration/2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 27, 
+"PPID" : 2, 
+"name" : "rcuc/2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 28, 
+"PPID" : 2, 
+"name" : "ksoftirqd/2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 30, 
+"PPID" : 2, 
+"name" : "kworker/2:0H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 31, 
+"PPID" : 2, 
+"name" : "cpuhp/3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 32, 
+"PPID" : 2, 
+"name" : "idle_inject/3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 33, 
+"PPID" : 2, 
+"name" : "migration/3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 34, 
+"PPID" : 2, 
+"name" : "rcuc/3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 35, 
+"PPID" : 2, 
+"name" : "ksoftirqd/3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 37, 
+"PPID" : 2, 
+"name" : "kworker/3:0H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 38, 
+"PPID" : 2, 
+"name" : "kdevtmpfs", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 39, 
+"PPID" : 2, 
+"name" : "netns", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 40, 
+"PPID" : 2, 
+"name" : "rcu_tasks_kthre", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 41, 
+"PPID" : 2, 
+"name" : "rcu_tasks_rude_", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 42, 
+"PPID" : 2, 
+"name" : "kauditd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 43, 
+"PPID" : 2, 
+"name" : "khungtaskd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 44, 
+"PPID" : 2, 
+"name" : "oom_reaper", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 45, 
+"PPID" : 2, 
+"name" : "writeback", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 46, 
+"PPID" : 2, 
+"name" : "kcompactd0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 47, 
+"PPID" : 2, 
+"name" : "ksmd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 48, 
+"PPID" : 2, 
+"name" : "khugepaged", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 91, 
+"PPID" : 2, 
+"name" : "kintegrityd", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 92, 
+"PPID" : 2, 
+"name" : "kblockd", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 93, 
+"PPID" : 2, 
+"name" : "blkcg_punt_bio", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 95, 
+"PPID" : 2, 
+"name" : "ata_sff", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 96, 
+"PPID" : 2, 
+"name" : "edac-poller", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 97, 
+"PPID" : 2, 
+"name" : "devfreq_wq", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 98, 
+"PPID" : 2, 
+"name" : "watchdogd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 100, 
+"PPID" : 2, 
+"name" : "kswapd0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 102, 
+"PPID" : 2, 
+"name" : "kthrotld", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 103, 
+"PPID" : 2, 
+"name" : "acpi_thermal_pm", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 104, 
+"PPID" : 2, 
+"name" : "nvme-wq", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 105, 
+"PPID" : 2, 
+"name" : "nvme-reset-wq", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 106, 
+"PPID" : 2, 
+"name" : "nvme-delete-wq", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 107, 
+"PPID" : 2, 
+"name" : "scsi_eh_0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 108, 
+"PPID" : 2, 
+"name" : "scsi_tmf_0", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 109, 
+"PPID" : 2, 
+"name" : "scsi_eh_1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 110, 
+"PPID" : 2, 
+"name" : "scsi_tmf_1", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 111, 
+"PPID" : 2, 
+"name" : "scsi_eh_2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 112, 
+"PPID" : 2, 
+"name" : "scsi_tmf_2", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 113, 
+"PPID" : 2, 
+"name" : "scsi_eh_3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 114, 
+"PPID" : 2, 
+"name" : "scsi_tmf_3", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 120, 
+"PPID" : 2, 
+"name" : "ipv6_addrconf", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 130, 
+"PPID" : 2, 
+"name" : "kstrp", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 135, 
+"PPID" : 2, 
+"name" : "zswap1", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 136, 
+"PPID" : 2, 
+"name" : "zswap1", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 137, 
+"PPID" : 2, 
+"name" : "zswap-shrink", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 138, 
+"PPID" : 2, 
+"name" : "kworker/u9:0", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 139, 
+"PPID" : 2, 
+"name" : "charger_manager", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 140, 
+"PPID" : 2, 
+"name" : "kworker/0:1H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 186, 
+"PPID" : 2, 
+"name" : "kworker/2:1H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 191, 
+"PPID" : 2, 
+"name" : "kworker/1:1H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 192, 
+"PPID" : 2, 
+"name" : "jbd2/sda6-8", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 193, 
+"PPID" : 2, 
+"name" : "ext4-rsv-conver", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 198, 
+"PPID" : 2, 
+"name" : "kworker/3:1H", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 226, 
+"PPID" : 1, 
+"name" : "systemd-journal", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 43
+},
+{
+"PID" : 239, 
+"PPID" : 2, 
+"name" : "usbip_event", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 240, 
+"PPID" : 2, 
+"name" : "iprt-VBoxWQueue", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 241, 
+"PPID" : 2, 
+"name" : "iprt-VBoxTscThr", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 242, 
+"PPID" : 1, 
+"name" : "systemd-udevd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 9
+},
+{
+"PID" : 247, 
+"PPID" : 1, 
+"name" : "lvmetad", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 1
+},
+{
+"PID" : 276, 
+"PPID" : 2, 
+"name" : "irq/29-mei_me", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 287, 
+"PPID" : 2, 
+"name" : "cryptd", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 288, 
+"PPID" : 2, 
+"name" : "led_workqueue", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 396, 
+"PPID" : 2, 
+"name" : "loop0", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 397, 
+"PPID" : 2, 
+"name" : "loop1", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 398, 
+"PPID" : 2, 
+"name" : "loop2", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 402, 
+"PPID" : 2, 
+"name" : "loop3", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 404, 
+"PPID" : 2, 
+"name" : "nv_queue", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 405, 
+"PPID" : 2, 
+"name" : "nv_queue", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 406, 
+"PPID" : 2, 
+"name" : "nvidia-modeset/", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 407, 
+"PPID" : 2, 
+"name" : "nvidia-modeset/", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 409, 
+"PPID" : 1, 
+"name" : "systemd-timesyn", 
+"user" : 979, 
+"state" : 1, 
+"mem_usage" : 6
+},
+{
+"PID" : 414, 
+"PPID" : 1, 
+"name" : "ckb-next-daemon", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 2
+},
+{
+"PID" : 415, 
+"PPID" : 1, 
+"name" : "dbus-daemon", 
+"user" : 81, 
+"state" : 1, 
+"mem_usage" : 5
+},
+{
+"PID" : 416, 
+"PPID" : 1, 
+"name" : "NetworkManager", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 18
+},
+{
+"PID" : 417, 
+"PPID" : 1, 
+"name" : "systemd-logind", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 7
+},
+{
+"PID" : 439, 
+"PPID" : 1, 
+"name" : "sddm", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 17
+},
+{
+"PID" : 440, 
+"PPID" : 1, 
+"name" : "containerd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 44
+},
+{
+"PID" : 453, 
+"PPID" : 1, 
+"name" : "mariadbd", 
+"user" : 974, 
+"state" : 1, 
+"mem_usage" : 81
+},
+{
+"PID" : 463, 
+"PPID" : 439, 
+"name" : "Xorg", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 101
+},
+{
+"PID" : 488, 
+"PPID" : 2, 
+"name" : "irq/32-nvidia", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 489, 
+"PPID" : 2, 
+"name" : "nvidia", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 490, 
+"PPID" : 2, 
+"name" : "nv_queue", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 500, 
+"PPID" : 1, 
+"name" : "dockerd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 76
+},
+{
+"PID" : 769, 
+"PPID" : 2, 
+"name" : "kworker/u8:2", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 779, 
+"PPID" : 2, 
+"name" : "kworker/0:2", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 821, 
+"PPID" : 439, 
+"name" : "sddm-helper", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 17
+},
+{
+"PID" : 823, 
+"PPID" : 1, 
+"name" : "systemd", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 9
+},
+{
+"PID" : 824, 
+"PPID" : 823, 
+"name" : "(sd-pam)", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 2
+},
+{
+"PID" : 829, 
+"PPID" : 2, 
+"name" : "kworker/2:0", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 834, 
+"PPID" : 1, 
+"name" : "gnome-keyring-d", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 6
+},
+{
+"PID" : 841, 
+"PPID" : 821, 
+"name" : "startplasma-x11", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 17
+},
+{
+"PID" : 846, 
+"PPID" : 823, 
+"name" : "dbus-daemon", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 5
+},
+{
+"PID" : 862, 
+"PPID" : 1, 
+"name" : "start_kdeinit", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 863, 
+"PPID" : 1, 
+"name" : "kdeinit5", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 24
+},
+{
+"PID" : 864, 
+"PPID" : 863, 
+"name" : "klauncher", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 43
+},
+{
+"PID" : 881, 
+"PPID" : 1, 
+"name" : "kded5", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 82
+},
+{
+"PID" : 885, 
+"PPID" : 1, 
+"name" : "kwin_x11", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 137
+},
+{
+"PID" : 897, 
+"PPID" : 823, 
+"name" : "kactivitymanage", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 35
+},
+{
+"PID" : 903, 
+"PPID" : 823, 
+"name" : "kglobalaccel5", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 43
+},
+{
+"PID" : 908, 
+"PPID" : 1, 
+"name" : "ksmserver", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 48
+},
+{
+"PID" : 915, 
+"PPID" : 1, 
+"name" : "kaccess", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 44
+},
+{
+"PID" : 918, 
+"PPID" : 1, 
+"name" : "polkitd", 
+"user" : 102, 
+"state" : 1, 
+"mem_usage" : 21
+},
+{
+"PID" : 920, 
+"PPID" : 1, 
+"name" : "plasmashell", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 284
+},
+{
+"PID" : 924, 
+"PPID" : 1, 
+"name" : "polkit-kde-auth", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 45
+},
+{
+"PID" : 928, 
+"PPID" : 1, 
+"name" : "baloo_file", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 140
+},
+{
+"PID" : 933, 
+"PPID" : 1, 
+"name" : "xembedsniproxy", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 22
+},
+{
+"PID" : 935, 
+"PPID" : 1, 
+"name" : "gmenudbusmenupr", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 22
+},
+{
+"PID" : 938, 
+"PPID" : 1, 
+"name" : "kdeconnectd", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 50
+},
+{
+"PID" : 953, 
+"PPID" : 1, 
+"name" : "DiscoverNotifie", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 47
+},
+{
+"PID" : 959, 
+"PPID" : 823, 
+"name" : "dconf-service", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 5
+},
+{
+"PID" : 964, 
+"PPID" : 823, 
+"name" : "pulseaudio", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 14
+},
+{
+"PID" : 970, 
+"PPID" : 908, 
+"name" : "kmix", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 78
+},
+{
+"PID" : 975, 
+"PPID" : 1, 
+"name" : "udisksd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 13
+},
+{
+"PID" : 978, 
+"PPID" : 908, 
+"name" : "baloorunner", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 43
+},
+{
+"PID" : 987, 
+"PPID" : 1, 
+"name" : "rtkit-daemon", 
+"user" : 133, 
+"state" : 1, 
+"mem_usage" : 2
+},
+{
+"PID" : 1002, 
+"PPID" : 1, 
+"name" : "korgac", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 62
+},
+{
+"PID" : 1004, 
+"PPID" : 1, 
+"name" : "org_kde_powerde", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 42
+},
+{
+"PID" : 1017, 
+"PPID" : 1, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 268
+},
+{
+"PID" : 1028, 
+"PPID" : 1, 
+"name" : "subl3", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 211
+},
+{
+"PID" : 1045, 
+"PPID" : 1, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 2
+},
+{
+"PID" : 1059, 
+"PPID" : 1, 
+"name" : "upowerd", 
+"user" : 0, 
+"state" : 1, 
+"mem_usage" : 9
+},
+{
+"PID" : 1062, 
+"PPID" : 823, 
+"name" : "at-spi-bus-laun", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 5
+},
+{
+"PID" : 1069, 
+"PPID" : 1062, 
+"name" : "dbus-daemon", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 4
+},
+{
+"PID" : 1077, 
+"PPID" : 823, 
+"name" : "at-spi2-registr", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 6
+},
+{
+"PID" : 1130, 
+"PPID" : 1, 
+"name" : "akonadi_control", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 48
+},
+{
+"PID" : 1134, 
+"PPID" : 1130, 
+"name" : "akonadiserver", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 35
+},
+{
+"PID" : 1136, 
+"PPID" : 823, 
+"name" : "kscreen_backend", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 21
+},
+{
+"PID" : 1144, 
+"PPID" : 1134, 
+"name" : "mysqld", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 72
+},
+{
+"PID" : 1149, 
+"PPID" : 823, 
+"name" : "mission-control", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 14
+},
+{
+"PID" : 1170, 
+"PPID" : 1017, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 44
+},
+{
+"PID" : 1171, 
+"PPID" : 1017, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 44
+},
+{
+"PID" : 1182, 
+"PPID" : 964, 
+"name" : "gsettings-helpe", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 6
+},
+{
+"PID" : 1196, 
+"PPID" : 1028, 
+"name" : "plugin_host", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 69
+},
+{
+"PID" : 1200, 
+"PPID" : 823, 
+"name" : "obexd", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 6
+},
+{
+"PID" : 1231, 
+"PPID" : 1130, 
+"name" : "akonadi_akonote", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 48
+},
+{
+"PID" : 1236, 
+"PPID" : 1130, 
+"name" : "akonadi_archive", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 113
+},
+{
+"PID" : 1237, 
+"PPID" : 1130, 
+"name" : "akonadi_birthda", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 49
+},
+{
+"PID" : 1238, 
+"PPID" : 1130, 
+"name" : "akonadi_contact", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 48
+},
+{
+"PID" : 1240, 
+"PPID" : 1130, 
+"name" : "akonadi_followu", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 50
+},
+{
+"PID" : 1243, 
+"PPID" : 1130, 
+"name" : "akonadi_ical_re", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 50
+},
+{
+"PID" : 1253, 
+"PPID" : 1130, 
+"name" : "akonadi_indexin", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 52
+},
+{
+"PID" : 1256, 
+"PPID" : 1170, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 45
+},
+{
+"PID" : 1257, 
+"PPID" : 1130, 
+"name" : "akonadi_maildir", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 49
+},
+{
+"PID" : 1258, 
+"PPID" : 1130, 
+"name" : "akonadi_maildis", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 49
+},
+{
+"PID" : 1265, 
+"PPID" : 1130, 
+"name" : "akonadi_mailfil", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 113
+},
+{
+"PID" : 1268, 
+"PPID" : 1130, 
+"name" : "akonadi_migrati", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 48
+},
+{
+"PID" : 1273, 
+"PPID" : 1130, 
+"name" : "akonadi_newmail", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 54
+},
+{
+"PID" : 1276, 
+"PPID" : 1130, 
+"name" : "akonadi_notes_a", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 51
+},
+{
+"PID" : 1278, 
+"PPID" : 1130, 
+"name" : "akonadi_sendlat", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 110
+},
+{
+"PID" : 1281, 
+"PPID" : 1130, 
+"name" : "akonadi_unified", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 112
+},
+{
+"PID" : 1330, 
+"PPID" : 1233, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 54
+},
+{
+"PID" : 1333, 
+"PPID" : 1171, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 36
+},
+{
+"PID" : 1334, 
+"PPID" : 1171, 
+"name" : "jetbrains-toolb", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 113
+},
+{
+"PID" : 1344, 
+"PPID" : 1196, 
+"name" : "node", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 67
+},
+{
+"PID" : 1476, 
+"PPID" : 823, 
+"name" : "gnome-keyring-d", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 7
+},
+{
+"PID" : 1509, 
+"PPID" : 1, 
+"name" : "dropbox", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 414
+},
+{
+"PID" : 1516, 
+"PPID" : 863, 
+"name" : "file.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 16
+},
+{
+"PID" : 1718, 
+"PPID" : 2, 
+"name" : "kworker/u8:0", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 1722, 
+"PPID" : 2, 
+"name" : "kworker/2:2", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 1732, 
+"PPID" : 920, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 292
+},
+{
+"PID" : 1738, 
+"PPID" : 1732, 
+"name" : "cat", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 1739, 
+"PPID" : 1732, 
+"name" : "cat", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 0
+},
+{
+"PID" : 1742, 
+"PPID" : 1732, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 61
+},
+{
+"PID" : 1743, 
+"PPID" : 1732, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 61
+},
+{
+"PID" : 1744, 
+"PPID" : 1743, 
+"name" : "nacl_helper", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 3
+},
+{
+"PID" : 1747, 
+"PPID" : 1743, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 15
+},
+{
+"PID" : 1765, 
+"PPID" : 1742, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 199
+},
+{
+"PID" : 1769, 
+"PPID" : 1763, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 85
+},
+{
+"PID" : 1778, 
+"PPID" : 1765, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 32
+},
+{
+"PID" : 1788, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 37
+},
+{
+"PID" : 1927, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 80
+},
+{
+"PID" : 1945, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 205
+},
+{
+"PID" : 1956, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 82
+},
+{
+"PID" : 1962, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 81
+},
+{
+"PID" : 1974, 
+"PPID" : 2, 
+"name" : "kworker/1:0", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 1994, 
+"PPID" : 2, 
+"name" : "kworker/3:1", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 1995, 
+"PPID" : 2, 
+"name" : "kworker/3:2", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 2265, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 91
+},
+{
+"PID" : 2292, 
+"PPID" : 1732, 
+"name" : "plasma-browser-", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 44
+},
+{
+"PID" : 2333, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 345
+},
+{
+"PID" : 2400, 
+"PPID" : 1763, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 57
+},
+{
+"PID" : 2437, 
+"PPID" : 1, 
+"name" : "kio_http_cache_", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 22
+},
+{
+"PID" : 2484, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 130
+},
+{
+"PID" : 2500, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 112
+},
+{
+"PID" : 2519, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 130
+},
+{
+"PID" : 2543, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 118
+},
+{
+"PID" : 2560, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 123
+},
+{
+"PID" : 2571, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 114
+},
+{
+"PID" : 2586, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 150
+},
+{
+"PID" : 2697, 
+"PPID" : 2, 
+"name" : "kworker/u8:1", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 2802, 
+"PPID" : 920, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 133
+},
+{
+"PID" : 2804, 
+"PPID" : 2802, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 39
+},
+{
+"PID" : 2805, 
+"PPID" : 2802, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 39
+},
+{
+"PID" : 2825, 
+"PPID" : 2804, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 124
+},
+{
+"PID" : 2840, 
+"PPID" : 2823, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 62
+},
+{
+"PID" : 2859, 
+"PPID" : 2823, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 227
+},
+{
+"PID" : 2895, 
+"PPID" : 2823, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 110
+},
+{
+"PID" : 2921, 
+"PPID" : 2859, 
+"name" : "zsh", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 6
+},
+{
+"PID" : 2923, 
+"PPID" : 2859, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 140
+},
+{
+"PID" : 2966, 
+"PPID" : 2859, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 64
+},
+{
+"PID" : 2982, 
+"PPID" : 2859, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 63
+},
+{
+"PID" : 3002, 
+"PPID" : 2923, 
+"name" : "code", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 128
+},
+{
+"PID" : 3068, 
+"PPID" : 2923, 
+"name" : "gopls", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 115
+},
+{
+"PID" : 3241, 
+"PPID" : 1, 
+"name" : "dolphin", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 94
+},
+{
+"PID" : 3262, 
+"PPID" : 863, 
+"name" : "file.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 18
+},
+{
+"PID" : 3308, 
+"PPID" : 2, 
+"name" : "kworker/1:2", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 3369, 
+"PPID" : 1196, 
+"name" : "zsh", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 7
+},
+{
+"PID" : 3533, 
+"PPID" : 2, 
+"name" : "kworker/0:0", 
+"user" : 0, 
+"state" : 1026, 
+"mem_usage" : 0
+},
+{
+"PID" : 4727, 
+"PPID" : 863, 
+"name" : "http.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 23
+},
+{
+"PID" : 4728, 
+"PPID" : 863, 
+"name" : "http.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 23
+},
+{
+"PID" : 4731, 
+"PPID" : 863, 
+"name" : "http.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 23
+},
+{
+"PID" : 4732, 
+"PPID" : 863, 
+"name" : "http.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 23
+},
+{
+"PID" : 4735, 
+"PPID" : 863, 
+"name" : "http.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 24
+},
+{
+"PID" : 4748, 
+"PPID" : 863, 
+"name" : "file.so", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 18
+},
+{
+"PID" : 4872, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 52
+},
+{
+"PID" : 4935, 
+"PPID" : 1747, 
+"name" : "chrome", 
+"user" : 1000, 
+"state" : 1, 
+"mem_usage" : 80
+},
+{
+"PID" : 4999, 
+"PPID" : 3369, 
+"name" : "cat", 
+"user" : 1000, 
+"state" : 0, 
+"mem_usage" : 0
+},
+],
+"procesos_en_ejecucion":1,
+"procesos_suspendidos":240,
+"procesos_detenidos":0,
+"procesos_zombie":0,
+"total_de_procesos":241,
+}

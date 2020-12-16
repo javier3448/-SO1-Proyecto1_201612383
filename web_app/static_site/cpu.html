@@ -1,0 +1,174 @@
+<!doctype html>
+<html>
+  <head>
+	<title>[SO1]Proyecto1_201612383</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.bundle.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.css"/>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.css"/>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  </head>
+  <body >
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		  <span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarNav">
+		  <ul class="navbar-nav">
+			<li class="nav-item active">
+			  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+			</li>
+            <li class="nav-item active">
+                <a class="nav-link" href="cpu.html">Monitor de CPU</a>
+            </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="ram.html">Monitor de RAM</a>
+            </li>
+		  </ul>
+		</div>
+	</nav>
+
+	<div class="row" style="margin: 45px;">
+
+		<canvas id="cpu_usage"></canvas>
+		<script>
+			var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+			var config = {
+				type: 'line',
+				data: {
+					labels: [
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						(new Date()).toLocaleTimeString(), 
+						],
+					datasets: [{
+						label: '%cpu',
+						fill: false,
+						backgroundColor: "cyan",
+						borderColor: "cyan",
+						data: [
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0,
+							0
+						],
+					}]
+				},
+				options: {
+					responsive: true,
+					plugins: {
+						title: {
+							display: true,
+							text: 'Uso de CPU'
+						},
+						tooltip: {
+							mode: 'index',
+							intersect: false,
+						}
+					},
+					hover: {
+						mode: 'nearest',
+						intersect: true
+					},
+					scales: {
+						x: {
+							display: true,
+							scaleLabel: {
+								display: true,
+								labelString: 'Month'
+							}
+						},
+						y: {
+							display: true,
+							scaleLabel: {
+								display: true,
+								labelString: 'Value'
+							}
+						},
+						yAxes: [{
+							ticks: {
+								beginAtZero: true,
+								suggestedMin: 0,
+								suggestedMax: 100
+							}
+						}]
+					}
+				}
+			};
+	
+			window.onload = function() {
+				var ctx = document.getElementById('cpu_usage').getContext('2d');
+				window.myLine = new Chart(ctx, config);
+			};
+	
+			let socket = new WebSocket("ws://localhost:3000/ws")
+			console.log("Attempting Websocket Connection")
+
+			//Listen in for any socket events
+			socket.onopen = () => {
+				console.log("Successfully Connected");
+				socket.send("Hello from RAM");
+			}
+
+			socket.onclose = (event) => {
+				console.log("Socket Closed Connection: ", event);
+			}
+
+			
+			let last_cputime_usage = 0;
+			let last_cputime_total = 0;
+			socket.onmessage = (msg) => {
+				//The replace is a horrible horrible bodge that is slow
+				serverObj = JSON.parse(msg.data.replace(",\n]", "\n]"));
+
+				window.myLine.data.datasets[0].data.shift();
+				window.myLine.data.labels.shift();
+
+				let usage_diff = serverObj.cputime_usage - last_cputime_usage;
+				let total_diff = serverObj.cputime_total - last_cputime_total;
+				let percentage = (usage_diff / total_diff) * 100
+				last_cputime_usage = serverObj.cputime_usage;
+				last_cputime_total = serverObj.cputime_total;
+				
+				window.myLine.data.datasets[0].data[10] = (percentage);
+				window.myLine.data.labels[10] = (new Date()).toLocaleTimeString();
+
+				window.myLine.update();
+
+				socket.send("hello");
+			}
+
+			socket.onerror = (error) => {
+				console.log("Socket error: ", error);
+			}
+		</script>
+	</div>
+
+</body>
+</html>

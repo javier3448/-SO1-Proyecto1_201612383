@@ -4,3 +4,73 @@ THE FUCKING HEADERS ARE IN HERE!
 
 
 for_each_process is now definined in <linux/sched/signal.h>
+
+
+`ps -eLf` shows some interesting stuff about parent processes: For init and 
+other stuff we would think has no parent it displays ppid 0
+
+
+according to a guy asking a question in a forum: 
+'init_task's parent and real_parent are initialised to point to itself.' So 
+we should be safe from null pointers I guess.
+Also use the real_parent process because we are dealing with
+
+
+0 running 
+1 || 1026 sleeping
+4 zombie 
+8 stopped
+https://francescoquaglia.github.io/TEACHING/PMMC/SLIDES/kernel-level-task-management.pdf (pagina 59)
+
+
+https://stackoverflow.com/questions/13507927/what-are-the-meanings-of-the-field-on-cpu-in-struct-task-struct-and-the-field
+
+kernel_cpustat 
+#include <linux/cpumask.h> 
+#include <linux/kernel_stat.h>
+https://github.com/finallyjustice/linux-module/blob/61dd2c2cff72157f60add0327ea0283624d5c99e/utilization/cpu.c
+formula:
+https://www.kgoettler.com/post/proc-stat/
+
+https://elixir.bootlin.com/linux/latest/source/fs/proc/meminfo.c
+https://sites.google.com/a/thetnaing.com/therunningone/how-to-calculate-systems-memory-utilization
+
+
+A GREAT EXAMPLE OF A SINGLE OPEN proc file IS meminfo.c:
+https://elixir.bootlin.com/linux/v5.9.13/source/fs/proc/meminfo.c
+Why doesnt it have an exit?
+it doesnt need a proc_ops
+
+
+TODO?: try to copy a good and simple single_open from the linux kernel
+(5.9.13) meminfo is a great candidate
+
+
+@readproc.c inside 'top' source code
+/*
+ * get_proc_stats - lookup a single tasks information and fill out a proc_t
+ *
+ * On failure, returns NULL.  On success, returns 'p' and 'p' is a valid
+ * and filled out proc_t structure.
+ */
+proc_t * get_proc_stats(pid_t pid, proc_t *p) {
+    struct utlbuf_s ub = { NULL, 0 };
+    static char path[32];
+    struct stat statbuf;
+
+    snprintf(path, sizeof path, "/proc/%d", pid);
+    if (stat(path, &statbuf)) {
+        perror("stat");
+        return NULL;
+    }
+
+    if (file2str(path, "stat", &ub) >= 0)
+        stat2proc(ub.buf, p);
+    if (file2str(path, "statm", &ub) >= 0)
+        statm2proc(ub.buf, p);
+    if (file2str(path, "status", &ub) >= 0)
+        status2proc(ub.buf, p, 0);
+
+    free(ub.buf);
+    return p;
+}
