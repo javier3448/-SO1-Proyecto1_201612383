@@ -39,7 +39,20 @@
 		</div>
 	</nav>
 
-	<div class="row" style="margin: 45px;">
+	<div class="jumbotron">
+		<h1>Monitor de CPU<h1>      
+	</div>
+
+	<div class="row col-lg-7" style="margin-left: 3%;">
+
+		<table class="table table-sm">
+			<tbody>
+				<tr>
+				<th scope="row">Porcentaje de utilizacion CPU</th>
+				<td id="cpu_percentage">0.00%</td>
+				</tr>
+			</tbody>
+		</table>
 
 		<canvas id="cpu_usage"></canvas>
 		<script>
@@ -158,6 +171,8 @@
 				
 				window.myLine.data.datasets[0].data[10] = (percentage);
 				window.myLine.data.labels[10] = (new Date()).toLocaleTimeString();
+
+				document.getElementById("cpu_percentage").innerHTML = percentage.toFixed(2).toString() + "%";
 
 				window.myLine.update();
 

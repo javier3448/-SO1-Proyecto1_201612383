@@ -39,225 +39,231 @@
 		</div>
 	</nav>
 
-	<table class="table table-sm">
-		<tbody>
-			<tr>
-			<th scope="row" id>Procesos en ejecucion</th>
-			<td id="procesos_en_ejecucion">3500</td>
-			</tr>
-			<tr>
-			<th scope="row">Procesos suspendidos</th>
-			<td id="procesos_suspendidos">3500</td>
-			</tr>
-			<tr>
-			<th scope="row">Procesos detenidos</th>
-			<td id="procesos_detenidos">3500</td>
-			</tr>
-			<tr>
-			<th scope="row">Procesos zombie</th>
-			<td id="procesos_zombie">3500</td>
-			</tr>
-			<tr>
-			<th scope="row">Total procesos</th>
-			<td id="total_de_procesos">3500</td>
-			</tr>
-		</tbody>
-	</table>
+	<div class="jumbotron">
+		<h1>Monitor de procesos<h1>      
+	</div>
 
-	<br>
-	<br>
+	<div class="row" style="margin: 35px;">
+		<table class="table table-sm">
+			<tbody>
+				<tr>
+				<th scope="row" id>Procesos en ejecucion</th>
+				<td id="procesos_en_ejecucion">3500</td>
+				</tr>
+				<tr>
+				<th scope="row">Procesos suspendidos</th>
+				<td id="procesos_suspendidos">3500</td>
+				</tr>
+				<tr>
+				<th scope="row">Procesos detenidos</th>
+				<td id="procesos_detenidos">3500</td>
+				</tr>
+				<tr>
+				<th scope="row">Procesos zombie</th>
+				<td id="procesos_zombie">3500</td>
+				</tr>
+				<tr>
+				<th scope="row">Total procesos</th>
+				<td id="total_de_procesos">3500</td>
+				</tr>
+			</tbody>
+		</table>
 
-	<table class="table table-sm" id="processes_table">
-		<thead>
-			<th>PID</th>
-			<th>Nombre</th>
-			<th>Usuario</th>
-			<th>Estado</th>
-			<th>%RAM</th>
-		</thead>
-		<tbody >
-		</tbody>
-	</table>
+		<br>
+		<br>
 
-	<script>
-		let socket = new WebSocket("ws://localhost:3000/ws")
-		console.log("Attempting Websocket Connection")
+		<table class="table table-sm" id="processes_table">
+			<thead>
+				<th>PID</th>
+				<th>Nombre</th>
+				<th>Usuario</th>
+				<th>Estado</th>
+				<th>%RAM</th>
+			</thead>
+			<tbody >
+			</tbody>
+		</table>
 
-		function stateToString(state){
-			if(state === 0){
-				return "running"
-			}
-			if(state === 1 || state === 1026){
-				return "sleeping"
-			}
-			if(state === 4){
-				return "zombie"
-			}
-			if(state === 8){
-				return "stopped"
-			}
-			return state.toString();
-		}
+		<script>
+			let socket = new WebSocket("ws://localhost:3000/ws")
+			console.log("Attempting Websocket Connection")
 
-		//@Big cheat
-		function userToString(user){
-			if (user === 0) { 
-				return "root";
+			function stateToString(state){
+				if(state === 0){
+					return "running"
+				}
+				if(state === 1 || state === 1026){
+					return "sleeping"
+				}
+				if(state === 4){
+					return "zombie"
+				}
+				if(state === 8){
+					return "stopped"
+				}
+				return state.toString();
 			}
-			if (user === 1) { 
-				return "bin";
-			}
-			if (user === 2) { 
-				return "daemon";
-			}
-			if (user === 8) { 
-				return "mail";
-			}
-			if (user === 14) { 
-				return "ftp";
-			}
-			if (user === 33) { 
-				return "http";
-			}
-			if (user === 65534) { 
-				return "nobody";
-			}
-			if (user === 81) { 
-				return "dbus";
-			}
-			if (user === 982) { 
-				return "systemd-journal-remote";
-			}
-			if (user === 981) { 
-				return "systemd-network";
-			}
-			if (user === 980) { 
-				return "systemd-resolve";
-			}
-			if (user === 979) { 
-				return "systemd-timesync";
-			}
-			if (user === 978) { 
-				return "systemd-coredump";
-			}
-			if (user === 68) { 
-				return "uuidd";
-			}
-			if (user === 977) { 
-				return "avahi";
-			}
-			if (user === 976) { 
-				return "colord";
-			}
-			if (user === 209) { 
-				return "cups";
-			}
-			if (user === 102) { 
-				return "polkitd";
-			}
-			if (user === 133) { 
-				return "rtkit";
-			}
-			if (user === 1000) { 
+
+			//@Big cheat
+			function userToString(user){
+				if (user === 0) { 
+					return "root";
+				}
+				if (user === 1) { 
+					return "bin";
+				}
+				if (user === 2) { 
+					return "daemon";
+				}
+				if (user === 8) { 
+					return "mail";
+				}
+				if (user === 14) { 
+					return "ftp";
+				}
+				if (user === 33) { 
+					return "http";
+				}
+				if (user === 65534) { 
+					return "nobody";
+				}
+				if (user === 81) { 
+					return "dbus";
+				}
+				if (user === 982) { 
+					return "systemd-journal-remote";
+				}
+				if (user === 981) { 
+					return "systemd-network";
+				}
+				if (user === 980) { 
+					return "systemd-resolve";
+				}
+				if (user === 979) { 
+					return "systemd-timesync";
+				}
+				if (user === 978) { 
+					return "systemd-coredump";
+				}
+				if (user === 68) { 
+					return "uuidd";
+				}
+				if (user === 977) { 
+					return "avahi";
+				}
+				if (user === 976) { 
+					return "colord";
+				}
+				if (user === 209) { 
+					return "cups";
+				}
+				if (user === 102) { 
+					return "polkitd";
+				}
+				if (user === 133) { 
+					return "rtkit";
+				}
+				if (user === 1000) { 
+					return "javier";
+				}
+				if (user === 143) { 
+					return "nvidia-persistenced";
+				}
+				if (user === 975) { 
+					return "sddm";
+				}
+				if (user === 140) { 
+					return "usbmux";
+				}
+				if (user === 974) { 
+					return "mysql";
+				}
+				if (user === 973) { 
+					return "git";
+				}
+				if (user === 970) { 
+					return "dnsmasq";
+				}
+				if (user === 40) { 
+					return "named";
+				}
+				if (user === 969) { 
+					return "mssql";
+				}
 				return "javier";
 			}
-			if (user === 143) { 
-				return "nvidia-persistenced";
-			}
-			if (user === 975) { 
-				return "sddm";
-			}
-			if (user === 140) { 
-				return "usbmux";
-			}
-			if (user === 974) { 
-				return "mysql";
-			}
-			if (user === 973) { 
-				return "git";
-			}
-			if (user === 970) { 
-				return "dnsmasq";
-			}
-			if (user === 40) { 
-				return "named";
-			}
-			if (user === 969) { 
-				return "mssql";
-			}
-			return "javier";
-		}
 
-		//Listen in for any socket events
-		socket.onopen = () => {
-			console.log("Successfully Connected");
-			socket.send("Hello from RAM");
-		}
+			//Listen in for any socket events
+			socket.onopen = () => {
+				console.log("Successfully Connected");
+				socket.send("Hello from RAM");
+			}
 
-		socket.onclose = (event) => {
-			console.log("Socket Closed Connection: ", event);
-		}
+			socket.onclose = (event) => {
+				console.log("Socket Closed Connection: ", event);
+			}
 
-		//@Horrible bodge because we dont understand how websockets work and the only way we 
-		//got it to not crash was to send a message back everytime we get one. So we can't send
-		//the message directly from the button event
-		let nextMessage = null;
-		socket.onmessage = (msg) => {
-			//The replace is a horrible horrible bodge that is slow
-			serverObj = JSON.parse(msg.data.replace(",\n]", "\n]"));
-
-			//@debug
-			//console.log(serverObj);
-			document.getElementById("procesos_en_ejecucion").innerHTML = serverObj.procesos_en_ejecucion.toString();
-			document.getElementById("procesos_suspendidos").innerHTML = serverObj.procesos_suspendidos.toString();
-			document.getElementById("procesos_detenidos").innerHTML = serverObj.procesos_detenidos.toString();
-			document.getElementById("procesos_zombie").innerHTML = serverObj.procesos_zombie.toString();
-			document.getElementById("total_de_procesos").innerHTML = serverObj.total_de_procesos.toString();
-
-			let new_tbody = document.createElement('tbody');
-			for (const process of serverObj.processes) {
-				let row = new_tbody.insertRow();
-
-				let pid = row.insertCell(0);
-				let nombre = row.insertCell(1);
-				let usuario = row.insertCell(2);
-				let estado = row.insertCell(3);
-				let ram = row.insertCell(4);
-				let kill = row.insertCell(5);
+			//@Horrible bodge because we dont understand how websockets work and the only way we 
+			//got it to not crash was to send a message back everytime we get one. So we can't send
+			//the message directly from the button event
+			let nextMessage = null;
+			socket.onmessage = (msg) => {
+				//The replace is a horrible horrible bodge that is slow
+				serverObj = JSON.parse(msg.data.replace(",\n]", "\n]"));
 
 				//@debug
-				//console.log(process);
+				//console.log(serverObj);
+				document.getElementById("procesos_en_ejecucion").innerHTML = serverObj.procesos_en_ejecucion.toString();
+				document.getElementById("procesos_suspendidos").innerHTML = serverObj.procesos_suspendidos.toString();
+				document.getElementById("procesos_detenidos").innerHTML = serverObj.procesos_detenidos.toString();
+				document.getElementById("procesos_zombie").innerHTML = serverObj.procesos_zombie.toString();
+				document.getElementById("total_de_procesos").innerHTML = serverObj.total_de_procesos.toString();
 
-				pid.innerHTML = process.PID.toString();
-				nombre.innerHTML = process.name.toString();
-				usuario.innerHTML = userToString(process.user);
-				estado.innerHTML = stateToString(process.state);
-				ram.innerHTML = ((process.mem_usage / 7896) * 100).toFixed(2).toString() + "%";
+				let new_tbody = document.createElement('tbody');
+				for (const process of serverObj.processes) {
+					let row = new_tbody.insertRow();
 
-                var button = document.createElement('BUTTON');  
-                var text = document.createTextNode("Kill"); 
-                button.appendChild(text); 
-				button.addEventListener('click', function () {
-					nextMessage = ("kill:" + process.PID);
-				});
-                kill.appendChild(button);
+					let pid = row.insertCell(0);
+					let nombre = row.insertCell(1);
+					let usuario = row.insertCell(2);
+					let estado = row.insertCell(3);
+					let ram = row.insertCell(4);
+					let kill = row.insertCell(5);
+
+					//@debug
+					//console.log(process);
+
+					pid.innerHTML = process.PID.toString();
+					nombre.innerHTML = process.name.toString();
+					usuario.innerHTML = userToString(process.user);
+					estado.innerHTML = stateToString(process.state);
+					ram.innerHTML = ((process.mem_usage / 7896) * 100).toFixed(2).toString() + "%";
+
+					var button = document.createElement('BUTTON');  
+					var text = document.createTextNode("Kill"); 
+					button.appendChild(text); 
+					button.addEventListener('click', function () {
+						nextMessage = ("kill:" + process.PID);
+					});
+					kill.appendChild(button);
+				}
+				let old_tbody = document.getElementById("processes_table").tBodies[0];
+				old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
+
+				if(nextMessage == null){
+					socket.send("hello");
+				}
+				else{
+					socket.send(nextMessage)
+					nextMessage = null
+				}
 			}
-			let old_tbody = document.getElementById("processes_table").tBodies[0];
-			old_tbody.parentNode.replaceChild(new_tbody, old_tbody);
 
-			if(nextMessage == null){
-				socket.send("hello");
+			socket.onerror = (error) => {
+				console.log("Socket error: ", error);
 			}
-			else{
-				socket.send(nextMessage)
-				nextMessage = null
-			}
-		}
-
-		socket.onerror = (error) => {
-			console.log("Socket error: ", error);
-		}
-	</script>
+		</script>
+	</div>
 
 	FALTA HACER TABLA DE PROCESOS
 	FALTA HACER EL ARBOL
